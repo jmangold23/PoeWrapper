@@ -48,11 +48,12 @@ function Invoke-PoeAIQuery {
         [string]$OutputPath       # The path where the output file will be moved if provided.
     )
     
-    # Get the current script's root directory. This is where the script is located.
-    $PSScriptRoot | Get-Item
+
+    $ParentDir = ($PSCommandPath | Split-Path -Parent).ToString() | get-item
     
+
     # Search recursively in the script's directory for the 'PoeWrapper.exe' executable.
-    $poewrapperexe = Get-ChildItem -Path ($PSScriptRoot | Get-Item).Directory.FullName -Recurse -Filter 'PoeWrapper.exe'
+    $poewrapperexe = Get-ChildItem -Path $ParentDir.Parent  -Recurse -Filter 'PoeWrapper.exe'
     
     # Create a new temporary file with a random name to store the output.
     $tempOutput = New-Item -Path $PSScriptRoot -Name ((New-Guid).Guid + ".txt") -ItemType File -Force
@@ -60,7 +61,7 @@ function Invoke-PoeAIQuery {
     # Start the 'PoeWrapper.exe' process with the necessary arguments.
     $processParams = @{
         FilePath = $poewrapperexe.FullName
-        WorkingDirectory = $poewrapperexe.Directory.FullName
+        WorkingDirectory = $ParentDir
         ArgumentList = "-ApiKey `"$ApiKey`" -BotName `"$BotName`" -UserMessage `"$UserMessage`" -SystemMessage `"$SystemMessage`""
         NoNewWindow = $true
         Wait = $true
