@@ -1,5 +1,7 @@
 # Poe AI .exe & PowerShell Wrapper
 
+![gif](Animation.gif)
+
 ## Rationale
 
 Poe provides limited information about their web APIs and encourages the use of their bot-to-bot Python FastAPI modules.
