@@ -58,10 +58,15 @@ python PoeWrapper.py -ApiKey "your_api_key" -BotName "your_bot_name" -UserMessag
 The ChatConductor class in PoeWrapper.py provides a CLI to interact with a chat bot using FastAPI Poe. It supports queing the bot's asynchronous communication and command-line arguments for easy use and integration.
 
 ## Usage
+```
 -ApiKey: API key for bot authentication.
+
 -BotName: Name of the bot, default 'chatgpt'.
+
 -UserMessage: Message to send to the bot.
+
 -SystemMessage: System context message (optional).
+```
 
 Run the script directly to get the bot's response in the console.
 
