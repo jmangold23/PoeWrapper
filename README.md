@@ -8,7 +8,7 @@ That is fine for Python.
 
 The main reason for creating an executable from a FastAPI application is to simplify the deployment process. Compiling the FastAPI code into an `.exe` file allows for easy distribution and execution on any Windows platform without the need for a Python runtime environment. This is particularly useful for end-users who may not be familiar with Python or do not want to deal with setting up a development environment.
 
-Furthermore, wrapping the executable with a PowerShell function provides an additional layer of convenience. PowerShell is a powerful scripting language that is built into Windows, and it allows for automation and easy manipulation of the executable. By providing a PowerShell wrapper, we make it straightforward for users to start, stop, and interact with the provided Poe FastAPI server code, but with simple local commands and nothing to host.
+Furthermore, wrapping the executable with a PowerShell function provides an additional layer of convenience. PowerShell is a powerful scripting language that is built into Windows, and it allows for automation and easy manipulation of the executable. By providing a PowerShell wrapper, we make it straightforward for users to interact with the provided Poe FastAPI server code, but with simple local commands and nothing to host.
 
 # Invoke-PoeAIQuery
 
