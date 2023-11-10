@@ -2,7 +2,7 @@
 
 ## Rationale
 
-Poe proives limited information about their web APIs and encourages the use of their bot to bot Python FastAPI modules.
+Poe provides limited information about their web APIs and encourages the use of their bot-to-bot Python FastAPI modules.
 
 That is fine for Python. 
 
