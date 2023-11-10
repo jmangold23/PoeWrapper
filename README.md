@@ -27,7 +27,7 @@ The PowerShell module provides an interface to interact with PoeAI bots, facilit
 To use the `Invoke-PoeAIQuery` function, import the module into your PowerShell session and provide the following params:
 
 ```powershell
-Import-Module ./Invoke-PoeAIQuery/Invoke-PoeAIQuery.psm1
+Import-Module .\Invoke-PoeAIQuery\Invoke-PoeAIQuery.psm1
 
 Invoke-PoeAIQuery -ApiKey 'your-api-key' -BotName 'your-bot-name' -UserMessage 'your-message' -SystemMessage 'your-system-message' -OutputPath 'optional-output-path'
 
